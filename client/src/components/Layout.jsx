@@ -17,8 +17,8 @@ export default function Layout() {
         <div className="flex items-center gap-3 px-6 py-5">
           <Store size={26} aria-hidden="true" />
           <div>
-            <p className="text-lg font-bold leading-tight">Controle de Estoque</p>
-            <p className="text-sm text-mar-100/70">Loja de acessórios</p>
+            <p className="text-lg font-bold leading-tight">CONNECTION</p>
+            <p className="text-sm text-mar-100/70">Controle de Estoque</p>
           </div>
         </div>
         <nav className="flex gap-1 overflow-x-auto px-3 pb-3 md:flex-col md:overflow-visible md:pb-0" aria-label="Menu principal">
