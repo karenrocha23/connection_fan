@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta: verde-mar (identidade da loja) + neutros quentes */
+  --color-mar-900: #0d3b3a;
+  --color-mar-700: #146a63;
+  --color-mar-100: #dcefeb;
+  --color-areia-50: #f7f6f2;
+  --color-areia-200: #e6e3da;
+  --color-areia-300: #cfcbbd;
+  --color-tinta: #1d2b2a;
+}
+
+body {
+  @apply bg-areia-50 text-tinta font-sans antialiased;
+}
+
+/* Componentes reutilizáveis */
+@layer components {
+  .card {
+    @apply rounded-xl border border-areia-200 bg-white;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors
+      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mar-700
+      disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primario {
+    @apply bg-mar-700 text-white hover:bg-mar-900;
+  }
+  .btn-secundario {
+    @apply border border-areia-300 bg-white text-tinta hover:bg-areia-50;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5;
+  }
+
+  .campo {
+    @apply w-full rounded-lg border border-areia-300 bg-white px-3 py-2 text-sm
+      focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-mar-700
+      disabled:bg-areia-50 disabled:text-tinta/60;
+  }
+  .campo[aria-invalid="true"] {
+    @apply border-red-500;
+  }
+}
